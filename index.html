@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>换个技能 · 让热爱彼此发生</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <nav><a class="brand" href="#top"><span class="brand-mark">×</span>换个技能</a><div class="nav-links"><a href="#explore">发现技能</a><a href="#how">如何交换</a></div><button class="outline-btn" onclick="openModal('profile')">发布技能 <span>↗</span></button></nav>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy"><div class="eyebrow"><i></i> SKILL SWAP CLUB · 2024</div><h1>用你会的，<em>换</em><br>你想学的。</h1><p>不用花钱报班，也不用一个人苦熬。把你的热爱拿出来，和同频的人交换一段成长。</p><div class="hero-actions"><button class="dark-btn" onclick="document.querySelector('#explore').scrollIntoView({behavior:'smooth'})">发现你的搭子 <span>→</span></button><button class="text-btn" onclick="openModal('profile')">我也来教一课 <b>↗</b></button></div><div class="hero-meta"><div><strong>2,480+</strong><span>正在交换</span></div><div><strong>86</strong><span>热门技能</span></div><div class="faces"><span>林</span><span>汪</span><span>陈</span><span>+2k</span></div></div></div>
+      <div class="hero-art"><div class="sun"></div><div class="scribble s1">✳</div><div class="scribble s2">↝</div><div class="paper-note note-1">会弹吉他的<br><b>找摄影搭子</b><small>北京 · 周末</small></div><div class="paper-note note-2">想学 Python<br><b>教你做咖啡</b><small>线上 · 每周二</small></div><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="skill-disc"><div>SKILL<br>SWAP</div><span>✦</span></div><div class="hero-quote">“我教她拍照，她教我看见。”</div></div>
+    </section>
+    <section class="ticker"><div>吉他 <b>✦</b> 水彩 <b>✦</b> Python <b>✦</b> 烘焙 <b>✦</b> 日语 <b>✦</b> 攀岩 <b>✦</b> 摄影 <b>✦</b> 吉他 <b>✦</b> 水彩 <b>✦</b> Python <b>✦</b> 烘焙 <b>✦</b></div></section>
+    <section class="explore section" id="explore"><div class="section-head"><div><div class="eyebrow"><i></i> FIND YOUR PERSON</div><h2>今天，遇见谁？</h2></div><button class="filter-btn" id="filterBtn" onclick="toggleFilters()">筛选 <span>⌄</span></button></div><div class="filters" id="filters"><button class="active" data-filter="all">全部</button><button data-filter="艺术">艺术创作</button><button data-filter="语言">语言沟通</button><button data-filter="技术">数字技能</button><button data-filter="生活">生活方式</button></div><div class="cards" id="cards"></div><button class="load-more" onclick="loadMore()">再看看 <span>↓</span></button></section>
+    <section class="match-banner"><div class="match-number">01</div><div><div class="eyebrow"><i></i> SMART MATCH</div><h2>不是随便配对，<br>是<em>双向奔赴。</em></h2></div><p>填写你能教与想学的技能，我们会帮你找到最合拍的交换组合。</p><button class="cream-btn" onclick="openModal('match')">试试智能匹配 <span>→</span></button><div class="match-stars">✦<br>　✦</div></section>
+    <section class="how section" id="how"><div class="section-head"><div><div class="eyebrow"><i></i> SIMPLE AS 1 · 2 · 3</div><h2>交换，其实很简单。</h2></div></div><div class="steps"><article><span>01</span><div class="step-icon">⌁</div><h3>说说你的热爱</h3><p>发布你擅长的，和想学的技能。真诚一点，具体一点。</p></article><article><span>02</span><div class="step-icon">⤨</div><h3>遇见对的人</h3><p>浏览推荐，发出交换邀请。一次对话，可能开启一段友谊。</p></article><article><span>03</span><div class="step-icon">✺</div><h3>开始共同成长</h3><p>约一次线上或线下见面，把“想学”变成“我会了”。</p></article></div></section>
+    <section class="cta"><div class="cta-sticker">YOUR<br>TURN<br>✦</div><div class="eyebrow"><i></i> YOUR NEXT CHAPTER</div><h2>你会的，<br>比你想象的更有价值。</h2><p>每一个热爱，都值得被看见。</p><button class="dark-btn" onclick="openModal('profile')">发布我的技能 <span>→</span></button></section>
+  </main>
+  <footer><a class="brand" href="#top"><span class="brand-mark">×</span>换个技能</a><span>让热爱彼此发生 · 2024</span><span>Made with curiosity ✦</span></footer>
+  <div class="modal-wrap" id="modal"><div class="modal"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+  <script src="app.js"></script>
+</body></html>
